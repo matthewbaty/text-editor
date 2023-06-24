@@ -20,7 +20,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        seDest: 'src-sw.js'
+        swDest: 'src-sw.js'
       }),
 
       new WebpackPwaManifest({
@@ -36,7 +36,7 @@ module.exports = () => {
         fingerprints: false,
         icons: [
           {
-            src: path.resolve(__dirname, 'src/images/logo.pgn'),
+            src: path.resolve(__dirname, 'src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           },
